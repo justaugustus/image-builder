@@ -1,0 +1,6 @@
+{
+  "kubernetes_semver": "v1.19.1",
+  "kubernetes_source_type": "http",
+  "kubernetes_http_source": "https://storage.googleapis.com/kubernetes-release/release",
+  "kubernetes_install_path": "c:\\k"
+}

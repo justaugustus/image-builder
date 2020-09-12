@@ -1,0 +1,7 @@
+{
+  "build_name": "windows-2019",
+  "image_offer": "WindowsServer",
+  "image_publisher": "MicrosoftWindowsServer",
+  "image_sku": "2019-Datacenter-Core-smalldisk",
+  "vm_size": "Standard_D2s_v3"
+}
