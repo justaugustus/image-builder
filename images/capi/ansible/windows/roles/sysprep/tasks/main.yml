@@ -47,7 +47,7 @@
   when: windows_updates_kbs_numbers|length > 0
 
 - name: Update Windows Defender signatures
-  win_shell: Update-MpSignature
+  win_shell: 'Update-MpSignature'
 
 # Requires admin rights to install 
 # https://docs.ansible.com/ansible/latest/user_guide/become.html#become-and-windows
