@@ -30,12 +30,12 @@
     - '%ALLUSERSPROFILE%\containerd\root'
 
 - name: Unpack containerd binaries
-  win_command: cmd /c tar -zxvf {{ containerd.dest }} -C "%programfiles%\containerd"
+  win_command: cmd /c tar -zxvf {{ containerd.dest }} -C "%SystemDrive%\program files\containerd"
 
 - name: Add containerd to path
   win_path:
     elements:
-    - '%programfiles%\containerd'
+    - '%programfiles%\containerd\bin'
     scope: Machine
 
 - name: Copy containerd config overrides

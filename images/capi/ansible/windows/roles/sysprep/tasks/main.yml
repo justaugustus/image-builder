@@ -43,11 +43,17 @@
 #  - WS 2004 https://support.microsoft.com/en-us/help/4555932
 - name: Install Windows updates based on KB numbers
   win_updates:
-    whitelist: "{{ windows_updates_kbs_numbers }}"
-  when: windows_updates_kbs_numbers|length > 0
+    category_names:
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
+    reboot: yes
+    # whitelist: "{{ windows_updates_kbs_numbers }}"
+  # when: windows_updates_kbs_numbers|length > 0
 
 - name: Update Windows Defender signatures
   win_shell: 'Update-MpSignature'
+
 
 # Requires admin rights to install 
 # https://docs.ansible.com/ansible/latest/user_guide/become.html#become-and-windows
